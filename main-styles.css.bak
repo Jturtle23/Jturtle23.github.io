@@ -1,0 +1,91 @@
+/* main-styles.css */
+/* Used on index.html */
+
+/* #####################
+   GLOBAL SELECTORS
+   ##################### */
+   
+:root {
+	--folder-fill: #ffffb3;
+	--folder-border: #ffd9b3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+ul {
+	margin: 20px 0;
+	list-style-position: inside;
+}
+
+/* #####################
+   COMPONENTS
+   ##################### */
+   
+#github-link {
+	position: absolute;
+	padding: 0 10px;
+	text-shadow: 1px -1px;
+}
+
+#container {
+	width: 50%;
+	margin: 15px auto;
+	font-size: 0; /* This fixes a 4px gap between the .tab's */
+}
+
+#tab-content-container {
+	min-height: 80vh;
+	max-height: auto;
+	padding: 15px 0;
+	background-color: var(--folder-fill);
+	border: 2px solid var(--folder-border);
+	border-radius: 0 10px 10px 10px;
+	word-wrap: break-word;
+}
+
+.tab {
+	position: relative;
+	top: 2px;
+	display: inline-block;
+	width: auto;
+	margin: 0;
+	padding: 10px 20px;
+	background-color: var(--folder-fill);
+	text-align: center;
+	font-size: 16px;
+	border: 2px solid var(--folder-border);
+	border-bottom: none;
+	border-radius: 10px 10px 0 0;
+}
+
+/* Select every child <div>s except for the first one */
+.tab:not(:first-of-type) {
+	border-left: none;
+}
+
+.tab:hover {
+	cursor: pointer;
+	background-color: #ffffcc;
+	box-shadow: 0 -1px 5px #ffff80;
+	transition-duration: 0.3s;
+}
+
+.tab-content {
+	width: inherit;
+	padding: 12px;
+	font-size: 16px;
+}
+
+/* #####################
+   MEDIA QUERIES
+   ##################### */
+   
+@media screen and (max-width: 784px) {
+	#container {
+		width: 95%;
+	}
+}
