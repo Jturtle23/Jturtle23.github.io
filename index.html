@@ -20,16 +20,16 @@
 
 <body>
 
-	<div id="github-link"><a href="https://github.com/Jturtle23">My GitHub</a></div>
+	<div id="github-link"><a href="https://github.com/Jturtle23">GitHub</a></div>
 
 	<div id="container">
 	
-		<div class="tab tab-1">What I Know</div>
-		<div class="tab tab-2">About Me</div>
-		<div class="tab tab-3">My Stuff</div>
+		<div class="tab">What I Know</div>
+		<div class="tab">About Me</div>
+		<div class="tab">My Stuff</div>
 		
 		<div id="tab-content-container">
-			<div class="tab-content tab-content-1">
+			<div class="tab-content">
 				
 				<p>Hello, I'm Jturtle23, and I love to code!</p>
 				
@@ -45,7 +45,8 @@
 				</ul>
 				
 			</div>
-			<div class="tab-content tab-content-2">
+			
+			<div class="tab-content">
 				
 				<p>My GitHub account is <a href="https://github.com/Jturtle23" target="_blank">Jturtle23</a>.</p>
 				
@@ -60,9 +61,10 @@
 				</ul>
 				
 			</div>
-			<div class="tab-content tab-content-3">
 			
-				<p>Here is a <a href="https://jturtle23.github.io/portfolio/" target="_blank">Pages repository</a> I made last school year.</p><br />
+			<div class="tab-content">
+			
+				<p>Here is a <a href="https://jturtle23.github.io/portfolio/" target="_blank">GitHub Pages website</a> I made last school year.</p><br />
 			
 				<p>If you want to try some of my Python programs, feel free to download any of the ones below! (You need to
 				have Python installed for them to work.)</p>
@@ -84,68 +86,16 @@
 			</div>
 		</div> <!-- /tab-content-container -->
 	</div> <!-- /container -->
-	
-<script>
 
-	function showTabContent(tabNumber) {
-		let currentTab;
-		switch (tabNumber) {
-			case 1:
-				hideAllTabs();
-				document.querySelector('.tab-content-1').style.display = 'block';
-				currentTab = 1;
-				break;
-			case 2:
-				hideAllTabs();
-				document.querySelector('.tab-content-2').style.display = 'block';
-				currentTab = 2;
-				break;
-			case 3:
-				hideAllTabs();
-				document.querySelector('.tab-content-3').style.display = 'block';
-				currentTab = 3;
-				break;
-		}
-		
-		tabs = document.querySelectorAll('.tab');
-		
-		for (var i = 0; i < tabs.length; i++) {
-			tabs[i].style.backgroundColor = '#ffffb3';
-		}
-		
-		document.querySelector('.tab-' + currentTab.toString()).style.backgroundColor = '#ffff80';
-	}
-	
-	function hideAllTabs() {
-		tabContentArray = document.querySelectorAll('.tab-content');
-	
-		tabContentArray.forEach((tabContent) => {
-			tabContent.style.display = 'none';
-		});
-	}
 
-	// Hide all tabs, then display the first tab
-	hideAllTabs();
-	
-	document.querySelector('.tab-content.tab-content-1').style.display = 'block';
-	//
-	
-	
-	// Add event listeners
-	tabContentArray = document.querySelectorAll('.tab-content');
-	
-	/*let i = 1;
-	tabContentArray.forEach(tabContent => {
-		console.log(i);
-		tabContent.addEventListener('click', () => showTabContent(i));
-		i++;
-	});*/
-	
-	document.querySelector('.tab.tab-1').addEventListener('click', () => showTabContent(1));
-	document.querySelector('.tab.tab-2').addEventListener('click', () => showTabContent(2));
-	document.querySelector('.tab.tab-3').addEventListener('click', () => showTabContent(3));
 
-</script>
+<script src="./scripts/tabs.js"></script>
+<noscript>
+	<p>
+	If you're seeing this, your browser does does not support JavaScript! That's a big deal, because without JavaScript, 
+	this website won't work. So, please consider enabling JavaScript for a better experience!
+	</p>
+</noscript>
 
 </body>
 
