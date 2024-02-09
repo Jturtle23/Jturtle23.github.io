@@ -75,6 +75,7 @@ ul {
 }
 
 .tab-content {
+	display: none;
 	width: inherit;
 	padding: 12px;
 	font-size: 16px;
@@ -88,4 +89,33 @@ ul {
 	#container {
 		width: 95%;
 	}
+	
+	#github-link {
+		position: static;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	
+	.tab {
+		position: relative;
+		top: 0;
+		display: block;
+		border-left: 2px solid var(--folder-border) !important;
+		border-radius: 10px 10px 0 0;
+	}
+	
+	.tab:nth-of-type(1) {
+		top: 14px;
+	}
+	
+	.tab:nth-of-type(2) {
+		top: 7px;
+	}
+	
+	#tab-content-container {
+		border-radius: 0 0 10px 10px;
+	}
+	
 }
